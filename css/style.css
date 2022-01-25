@@ -74,6 +74,7 @@ header h4 {
 main {
   margin-top: 123px;
   margin-left: 19px;
+  margin-bottom: 100px;
 }
 
 nav {
@@ -82,6 +83,19 @@ nav {
   display: flex;
   overflow-x: scroll;
 }
+
+/* TIRAR SCROLLBAR */
+nav::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+nav::-webkit-scrollbar-track {
+  background: none; /* color of the tracking area */
+}
+nav::-webkit-scrollbar-thumb {
+  background-color: none; /* color of the scroll thumb */
+}
+
 section h3 {
   font-style: normal;
   font-weight: normal;
@@ -93,15 +107,21 @@ section h3 {
 
 nav article {
   width: 172px;
-  height: 216px;
+  height: 100%;
   font-family: "Roboto", sans-serif;
   margin-right: 16px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
 }
 
 article img {
   width: 144px;
   height: 87px;
   border-radius: 15px;
+  margin: 18px 14px 0 14px;
 }
 
 article h4 {
@@ -110,6 +130,7 @@ article h4 {
   font-size: 16px;
   line-height: 19px;
   color: #333333;
+  margin: 8px 14px 0 14px;
 }
 
 article p {
@@ -118,6 +139,7 @@ article p {
   font-size: 15px;
   line-height: 18px;
   color: #a6a6a6;
+  margin: 4px 14px 0 14px;
 }
 
 article span {
@@ -125,6 +147,7 @@ article span {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
+  margin: 5px 14px 13px 14px;
 }
 /* FOOTER */
 footer {
