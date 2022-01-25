@@ -1,0 +1,111 @@
+/* IMPORTANTO FONT DO GOOLE */
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;500;700&display=swap");
+
+/* SELETOR UNIVERSAL E BODY */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Righteous", cursive;
+  background-color: #e5e5e5;
+}
+
+/* INICIO TELA VERMELHA */
+.inicio {
+  width: 100vw;
+  height: 100vh;
+  background-color: #cf2b2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio h2 {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.spinner {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  border: 8px solid #ffffff;
+  border-left-color: #cf2b2b;
+
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* TELA INICIAL */
+header {
+  width: 100vw;
+  height: 92px;
+  background-color: #cf2b2b;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header div {
+  margin-left: 21px;
+}
+header h2 {
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 55px;
+}
+header h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+/* MAIN */
+main {
+}
+
+/* FOOTER */
+footer {
+  width: 100vw;
+  height: 92px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer button {
+  width: 87%;
+  height: 61px;
+  border-radius: 25px;
+  background-color: #cbcbcb;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer button span {
+  width: 60%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+}
