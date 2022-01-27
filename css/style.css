@@ -115,13 +115,14 @@ nav article {
   flex-direction: column;
   background-color: #ffffff;
 }
-
+.verde {
+  background-color: green;
+}
 article img {
   width: 144px;
   height: 87px;
   border-radius: 12px;
   margin: 18px 14px 0 14px;
-  background-size: cover;
 }
 
 article h4 {
