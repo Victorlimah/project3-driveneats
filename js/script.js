@@ -9,3 +9,8 @@
 // quando tiver marcado:
 // Fechar pedido
 // background: #32B72F;
+
+setTimeout(function () {
+  let paginaCarregando = document.getElementById("inicio");
+  paginaCarregando.style.display = "none";
+}, 1500);

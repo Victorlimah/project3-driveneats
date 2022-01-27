@@ -12,20 +12,21 @@ body {
 }
 
 /* INICIO TELA VERMELHA */
-.inicio {
+#inicio {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   background-color: #cf2b2b;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
-  z-index: 3;
+  bottom: 0;
+  z-index: 5;
 }
 
-.inicio h2 {
+#inicio h2 {
   font-size: 50px;
   color: #ffffff;
 }
