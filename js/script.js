@@ -15,39 +15,39 @@ setTimeout(function () {
   paginaCarregando.style.display = "none";
 }, 1500);
 
+var itemMiojo = document.getElementById("miojo");
+var itemMacarronada = document.getElementById("macarronada");
+var itemArroz = document.getElementById("arroz");
+var itemFeijoada = document.getElementById("feijoada");
+
+var backgroundSelecionado =
+  "0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+var backgroundPadrao = "0px 0px 10px -4px rgba(0, 0, 0, 0.25)";
+
 function marcarMiojoEscolha() {
   zerarEscolhasComidas();
-  let itemSelecionado = document.getElementById("miojo");
-  itemSelecionado.style.boxShadow =
-    "0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+  itemMiojo.style.boxShadow = backgroundSelecionado;
 }
 
 function marcarMacarraoEscolha() {
   zerarEscolhasComidas();
-  let itemSelecionado = document.getElementById("macarronada");
-  itemSelecionado.style.boxShadow =
-    "0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+  itemMacarronada.style.boxShadow = backgroundSelecionado;
 }
 
 function marcarArrozEscolha() {
   zerarEscolhasComidas();
-  let itemSelecionado = document.getElementById("arroz");
-  itemSelecionado.style.boxShadow =
-    "0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+  itemArroz.style.boxShadow = backgroundSelecionado;
 }
 
 function marcarFeijoadaEscolha() {
   zerarEscolhasComidas();
-  let itemSelecionado = document.getElementById("feijoada");
-  itemSelecionado.style.boxShadow =
-    "0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F";
+  itemFeijoada.style.boxShadow = backgroundSelecionado;
 }
 
 function zerarEscolhasComidas() {
-  let itemMiojo = document.getElementById("miojo");
-  let itemMacarronada = document.getElementById("macarronada");
-  let itemArroz = document.getElementById("arroz");
-  let itemFeijoada = document.getElementById("feijoada");
-  itemMiojo.style.boxShadow = "0px 0px 10px -4px rgba(0, 0, 0, 0.25)";
-  itemMacarronada.style.boxShadow = "0px 0px 10px -4px rgba(0, 0, 0, 0.25)";
+  let comidas = [itemMiojo, itemMacarronada, itemArroz, itemFeijoada];
+
+  for (i = 0; i < comidas.length; i++) {
+    comidas[i].style.boxShadow = backgroundPadrao;
+  }
 }
