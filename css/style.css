@@ -170,7 +170,7 @@ footer {
 footer button {
   width: 87%;
   height: 61px;
-  border-radius: 25px;
+  border-radius: 50px;
   background-color: #cbcbcb;
   border: none;
   display: flex;
@@ -195,4 +195,8 @@ footer button span {
 .background-selecionado {
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25),
     inset 0px 0px 0px 5px #32b72f;
+}
+
+.background-botao {
+  background-color: #32b72f;
 }

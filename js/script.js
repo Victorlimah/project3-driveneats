@@ -1,8 +1,3 @@
-// QUANDO SELECIONAR ITEM FAZER ISSO:
-// inset 0px 0px 0px 5px #32b72f
-
-// quando clickar em um os outros ficam sem borda
-
 // botão quando os 3 não estiverem marcados:
 // Selecione os 3 itens para fechar o pedido
 
@@ -15,28 +10,44 @@ setTimeout(function () {
   paginaCarregando.style.display = "none";
 }, 1500);
 
-const primeiroItem = document.querySelector(".primeiroItem");
-const segundoItem = document.querySelector(".segundoItem");
-const terceiroItem = document.querySelector(".terceiroItem");
-const quartoItem = document.querySelector(".quartoItem");
 const comidas = ["miojo", "macarrao", "arroz", "feijoada"];
 const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
-const listaOpcoes = [primeiroItem, segundoItem, terceiroItem, quartoItem];
+let comidaSelecionada = false;
+let bebidaSelecionada = false;
+let sobremesaSelecionada = false;
 
 function marcarEscolha(itemSelecionado) {
   zerarEscolhas(itemSelecionado);
+
   let nomeItem = document.getElementById(itemSelecionado);
 
   for (i = 0; i < 4; i++) {
-    if (
-      itemSelecionado === comidas[i] ||
-      itemSelecionado === bebidas[i] ||
-      itemSelecionado === sobremesas[i]
-    ) {
-      nomeItem.classList.toggle("background-selecionado");
+    if (itemSelecionado === comidas[i]) {
+      comidaSelecionada = true;
+      colocarBackground(nomeItem);
+    } else if (itemSelecionado === bebidas[i]) {
+      bebidaSelecionada = true;
+      colocarBackground(nomeItem);
+    } else if (itemSelecionado === sobremesas[i]) {
+      sobremesaSelecionada = true;
+      colocarBackground(nomeItem);
     }
   }
+  verificaSeJaSelecionouTudo();
+}
+
+function verificaSeJaSelecionouTudo() {
+  const elemento = document.querySelector(".mensagem-botao");
+  const botao = document.querySelector("footer button");
+  if (comidaSelecionada && bebidaSelecionada && sobremesaSelecionada) {
+    botao.classList.add("background-botao");
+    elemento.innerHTML = "Fechar pedido";
+  }
+}
+
+function colocarBackground(nomeItem) {
+  nomeItem.classList.toggle("background-selecionado");
 }
 
 function zerarEscolhas(itemCardapio) {
