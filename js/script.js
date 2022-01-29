@@ -12,6 +12,8 @@ const sobremesas = ["pudim", "petit", "sorvete", "acai"];
 let comidaSelecionada;
 let bebidaSelecionada;
 let sobremesaSelecionada;
+let nome = "";
+let endereco = "";
 
 function marcarEscolha(itemSelecionado) {
   let nomeItem = document.getElementById(itemSelecionado);
@@ -80,4 +82,9 @@ function zerarEscolhas(itemCardapio) {
       }
     }
   }
+}
+
+function cliqueFinalizarPedido() {
+  nome = prompt("Digite seu nome: ");
+  endereco = prompt("Digite seu endereço: ");
 }
