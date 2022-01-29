@@ -1,21 +1,17 @@
-// botão quando os 3 não estiverem marcados:
-// Selecione os 3 itens para fechar o pedido
-
-// quando tiver marcado:
-// Fechar pedido
-// background: #32B72F;
+// FAZER FUNÇÃO DO BOTAO FECHAR PEDIDO (POP-UP)
+// COLOCAR ICONE DE V NOS ELEMENTOS SELECIONADOS
 
 setTimeout(function () {
-  let paginaCarregando = document.getElementById("inicio");
-  paginaCarregando.style.display = "none";
+  const paginaCarregando = document.querySelector(".inicio");
+  paginaCarregando.classList.add("escondido");
 }, 1500);
 
 const comidas = ["miojo", "macarrao", "arroz", "feijoada"];
 const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
-let comidaSelecionada = false;
-let bebidaSelecionada = false;
-let sobremesaSelecionada = false;
+let comidaSelecionada;
+let bebidaSelecionada;
+let sobremesaSelecionada;
 
 function marcarEscolha(itemSelecionado) {
   zerarEscolhas(itemSelecionado);
