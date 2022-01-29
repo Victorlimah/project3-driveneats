@@ -15,7 +15,8 @@ let sobremesaSelecionada;
 
 function marcarEscolha(itemSelecionado) {
   let nomeItem = document.getElementById(itemSelecionado);
-  let nomeCheck = document.querySelector("#" + itemSelecionado + ".check");
+  let string = "#" + itemSelecionado + " .check";
+  let nomeCheck = document.querySelector(string);
   zerarEscolhas(itemSelecionado);
   for (i = 0; i < 4; i++) {
     if (itemSelecionado === comidas[i]) {
@@ -54,7 +55,7 @@ function zerarEscolhas(itemCardapio) {
   if (comidas.includes(itemCardapio)) {
     for (i = 0; i < 4; i++) {
       comida = document.getElementById(comidas[i]);
-      let check = document.querySelector("#" + comidas[i] + ".check");
+      let check = document.querySelector("#" + comidas[i] + " .check");
       if (comida.classList.contains("background-selecionado")) {
         comida.classList.remove("background-selecionado");
         check.classList.add("escondido");
@@ -63,7 +64,7 @@ function zerarEscolhas(itemCardapio) {
   } else if (bebidas.includes(itemCardapio)) {
     for (i = 0; i < 4; i++) {
       bebida = document.getElementById(bebidas[i]);
-      let check = document.querySelector("#" + bebidas[i] + ".check");
+      let check = document.querySelector("#" + bebidas[i] + " .check");
       if (bebida.classList.contains("background-selecionado")) {
         bebida.classList.remove("background-selecionado");
         check.classList.add("escondido");
@@ -72,7 +73,7 @@ function zerarEscolhas(itemCardapio) {
   } else if (sobremesas.includes(itemCardapio)) {
     for (i = 0; i < 4; i++) {
       sobremesa = document.getElementById(sobremesas[i]);
-      let check = document.querySelector("#" + sobremesas[i] + ".check");
+      let check = document.querySelector("#" + sobremesas[i] + " .check");
       if (sobremesa.classList.contains("background-selecionado")) {
         sobremesa.classList.remove("background-selecionado");
         check.classList.add("escondido");

@@ -213,8 +213,3 @@ nav::-webkit-scrollbar-track {
 nav::-webkit-scrollbar-thumb {
   background-color: none; /* color of the scroll thumb */
 }
-
-#miojo .check {
-  display: flex;
-  background-color: red;
-}
