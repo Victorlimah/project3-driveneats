@@ -96,6 +96,7 @@ function zerarEscolhas(itemCardapio) {
 
 function cliqueFinalizarPedido() {
   if (verificaSeJaSelecionouTudo()) {
+    window.scrollTo(0, 0);
     const checkComida = document.querySelector(".comida-escolhida h4");
     const precoComida = document.querySelector(".comida-escolhida span");
     const checkBebida = document.querySelector(".bebida-escolhida h4");
@@ -117,7 +118,7 @@ function cliqueFinalizarPedido() {
       parseFloat(precoBebidaSelecionada) +
       parseFloat(precoSobremesaSelecionada);
     valorTotal = valorTotal.toFixed(2);
-    precoTotal.innerHTML += valorTotal.replace(".", ",");
+    precoTotal.innerHTML = "R$ " + valorTotal.replace(".", ",");
 
     popUp.classList.remove("escondido");
   }
