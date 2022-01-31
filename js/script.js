@@ -1,6 +1,7 @@
 const comidas = ["miojo", "macarrao", "arroz", "feijoada"];
 const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
+const popUp = document.querySelector(".finalizacao-pedido");
 let comidaSelecionada;
 let bebidaSelecionada;
 let sobremesaSelecionada;
@@ -11,7 +12,6 @@ setTimeout(function () {
   const paginaCarregando = document.querySelector(".inicio");
   paginaCarregando.classList.add("escondido");
 }, 1500);
-
 
 function marcarEscolha(itemSelecionado) {
   let nomeItem = document.getElementById(itemSelecionado);
@@ -39,6 +39,7 @@ function verificaSeJaSelecionouTudo() {
   if (comidaSelecionada && bebidaSelecionada && sobremesaSelecionada) {
     botao.classList.add("background-botao");
     elemento.innerHTML = "Fechar pedido";
+    return true;
   }
 }
 
@@ -83,6 +84,16 @@ function zerarEscolhas(itemCardapio) {
 }
 
 function cliqueFinalizarPedido() {
+  if (verificaSeJaSelecionouTudo()) {
+    popUp.classList.remove("escondido");
+  }
+}
+
+function confirmarPedido() {
   nome = prompt("Digite seu nome: ");
   endereco = prompt("Digite seu endereço: ");
+}
+
+function cancelarPedido() {
+  popUp.classList.add("escondido");
 }

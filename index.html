@@ -223,7 +223,7 @@
         </section>
       </main>
 
-      <section class="finalizacao-pedido">
+      <section class="finalizacao-pedido escondido">
         <div class="pop-up">
           <h4>Confirme seu pedido</h4>
           <div class="produtos-carrinho">
@@ -245,8 +245,10 @@
             </div>
           </div>
 
-          <button class="botao-confirm">Tudo certo, pode pedir!</button>
-          <button class="botao-cancel">Cancelar</button>
+          <button onclick="confirmarPedido()" class="botao-confirm">
+            Tudo certo, pode pedir!
+          </button>
+          <button  onclick="cancelarPedido()" class="botao-cancel">Cancelar</button>
         </div>
       </section>
 
