@@ -157,6 +157,7 @@ article span {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .finalizacao-pedido .pop-up {
@@ -170,7 +171,7 @@ article span {
 
 .pop-up h4 {
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 22px;
   line-height: 26px;
   color: #ffffff;
@@ -195,7 +196,39 @@ article span {
   font-weight: normal;
   font-size: 22px;
   line-height: 26px;
-  color: red;
+  color: #ffffff;
+}
+
+.preco-total h4,
+.preco-total span {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.pop-up button {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+
+  justify-content: center;
+}
+
+.botao-confirm {
+  width: 329px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  color: #50d074;
+  border: none;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.botao-cancel {
+  color: #ffffff;
+  border: none;
+  background: #50d074;
 }
 
 /* FOOTER */
