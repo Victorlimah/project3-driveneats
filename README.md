@@ -8,13 +8,20 @@ Além disso, foi criado um sistema com JavaScript para fazer a lógica e ação 
 
 ## Objetivos
 
-- Aplicar layout para desktop, seguindo layout fornecido no figma
-- Aplicar layout para mobile, seguindo layout fornecido no figma
-- O layout sem sidebar deve ser ativado quando a largura da tela for menor que 935px
-- O layout para mobile deve ser ativado quando a largura da tela for inferior a 614px
-- Não é obrigatório que a sidebar fique fixa conforme o usuário desce na página como ocorre no Instagram (mas é um bônus)
-- Não é obrigatório que os posts dos usuários tenham comentários, e que possua o local onde se escreve os comentários a serem publicados (mas é um bônus)
-
+- Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop)
+- O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem
+- Você pode usar imagens e textos aleatórios para ilustrar a página, porém varie o preço em cada item da mesma categoria
+- As fontes utilizadas são: [Righteous](https://fonts.google.com/specimen/Righteous) (nome do restaurante e títulos das categorias) e [Roboto](https://fonts.google.com/specimen/Roboto) (demais textos)
+- Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do layout
+- Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`. No modo desktop um scroll é exibido, mas no modo celular não.
+- Ao clicar sobre um item, o mesmo deve ser marcado como selecionado, seguindo layout da tela 3
+- Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado
+- Ao clicar em um item já marcado, **não** é necessário desmarcá-lo
+- Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer.
+- Quando o usuário tiver selecionado os itens das 3 categorias, o botão deve mudar para o estado de habilitado, seguindo layout da tela 5
+- Ao finalizar o pedido, o usuário deverá ser encaminhado para o WhatsApp Web, em conversa com o contato do restaurante, já com uma mensagem padrão preenchida
+- Ao clicar em finalizar pedido, lance dois `prompt` para o usuário solicitando seu nome e endereço. Essas informações devem então serem adicionadas na mensagem final que é enviada por WhatsApp
+- Ao clicar em "Finalizar pedido", em vez de ir para o WhatsApp direto, primeiro revise a compra seguindo a tela Bônus disponível no Figma.
 
 [ghpages]: <https://victorlimah.github.io/project3-driveneats/>
 [lfig]: <https://www.figma.com/file/i8tceg0W7Z9FfANaDbR3FV/DrivenEats?node-id=0%3A1>
