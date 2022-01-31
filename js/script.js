@@ -1,11 +1,3 @@
-// FAZER FUNÇÃO DO BOTAO FECHAR PEDIDO (POP-UP)
-// COLOCAR ICONE DE V NOS ELEMENTOS SELECIONADOS
-
-setTimeout(function () {
-  const paginaCarregando = document.querySelector(".inicio");
-  paginaCarregando.classList.add("escondido");
-}, 1500);
-
 const comidas = ["miojo", "macarrao", "arroz", "feijoada"];
 const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
@@ -14,6 +6,12 @@ let bebidaSelecionada;
 let sobremesaSelecionada;
 let nome = "";
 let endereco = "";
+
+setTimeout(function () {
+  const paginaCarregando = document.querySelector(".inicio");
+  paginaCarregando.classList.add("escondido");
+}, 1500);
+
 
 function marcarEscolha(itemSelecionado) {
   let nomeItem = document.getElementById(itemSelecionado);
