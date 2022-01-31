@@ -3,8 +3,11 @@ const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
 const popUp = document.querySelector(".finalizacao-pedido");
 let comidaSelecionada;
+let nomeComidaSelecionada;
 let bebidaSelecionada;
+let nomeBebidaSelecionada;
 let sobremesaSelecionada;
+let nomeSobremesaSelecionada;
 let nome = "";
 let endereco = "";
 
@@ -13,7 +16,7 @@ setTimeout(function () {
   paginaCarregando.classList.add("escondido");
 }, 1500);
 
-function marcarEscolha(itemSelecionado) {
+function marcarEscolha(itemSelecionado, nomeParaInserirCarrinho) {
   let nomeItem = document.getElementById(itemSelecionado);
   let string = "#" + itemSelecionado + " .check";
   let nomeCheck = document.querySelector(string);
@@ -21,12 +24,15 @@ function marcarEscolha(itemSelecionado) {
   for (i = 0; i < 4; i++) {
     if (itemSelecionado === comidas[i]) {
       comidaSelecionada = true;
+      nomeComidaSelecionada = nomeParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     } else if (itemSelecionado === bebidas[i]) {
       bebidaSelecionada = true;
+      nomeBebidaSelecionada = nomeParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     } else if (itemSelecionado === sobremesas[i]) {
       sobremesaSelecionada = true;
+      nomeSobremesaSelecionada = nomeParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     }
   }

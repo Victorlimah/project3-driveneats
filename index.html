@@ -30,7 +30,7 @@
           <nav class="nav-comida">
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('miojo')"
+              onclick="marcarEscolha('miojo','Miojo Gourmet')"
               id="miojo"
             >
               <img src="./images/miojo-gourmet.jpg" alt="" />
@@ -45,7 +45,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('macarrao')"
+              onclick="marcarEscolha('macarrao','Macarronada boa')"
               id="macarrao"
             >
               <img src="./images/macarrao-parmegiana.jpg" alt="" />
@@ -60,7 +60,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('arroz')"
+              onclick="marcarEscolha('arroz', 'Arroz padrão')"
               id="arroz"
             >
               <img src="./images/arroz-parmegiana.jpg" alt="" />
@@ -75,7 +75,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('feijoada')"
+              onclick="marcarEscolha('feijoada', 'Feijoada raiz')"
               id="feijoada"
             >
               <img src="./images/feijoada.jpeg" alt="" />
@@ -96,7 +96,7 @@
           <nav>
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('coca')"
+              onclick="marcarEscolha('coca','Coquinha gelada')"
               id="coca"
             >
               <img src="./images/coca-gelada.jpg" alt="" />
@@ -111,7 +111,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('pepsi')"
+              onclick="marcarEscolha('pepsi', 'Coquinha falsiê')"
               id="pepsi"
             >
               <img src="./images/coca-concorrencia.jpeg" alt="" />
@@ -126,7 +126,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('fanta')"
+              onclick="marcarEscolha('fanta','Fanta boa')"
               id="fanta"
             >
               <img src="./images/fanta-gelada.jpeg" alt="" />
@@ -141,7 +141,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('agua')"
+              onclick="marcarEscolha('agua','Água mineral')"
               id="agua"
             >
               <img src="./images/agua.jpeg" alt="" />
@@ -162,7 +162,7 @@
           <nav>
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('pudim')"
+              onclick="marcarEscolha('pudim', 'Pudim de leite')"
               id="pudim"
             >
               <img src="./images/pudim.jpeg" alt="" />
@@ -177,7 +177,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('petit')"
+              onclick="marcarEscolha('petit', 'Petit Gateau')"
               id="petit"
             >
               <img src="./images/petit-gateau.jpeg" alt="" />
@@ -192,7 +192,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('sorvete')"
+              onclick="marcarEscolha('sorvete', 'Sorvete')"
               id="sorvete"
             >
               <img src="./images/sorvete.jpeg" alt="" />
@@ -207,7 +207,7 @@
 
             <article
               data-identifier="food-option"
-              onclick="marcarEscolha('acai')"
+              onclick="marcarEscolha('acai', 'Açaí)"
               id="acai"
             >
               <img src="./images/acai.jpeg" alt="" />
@@ -248,7 +248,9 @@
           <button onclick="confirmarPedido()" class="botao-confirm">
             Tudo certo, pode pedir!
           </button>
-          <button  onclick="cancelarPedido()" class="botao-cancel">Cancelar</button>
+          <button onclick="cancelarPedido()" class="botao-cancel">
+            Cancelar
+          </button>
         </div>
       </section>
 
