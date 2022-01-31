@@ -162,7 +162,7 @@ article span {
 
 .finalizacao-pedido .pop-up {
   width: 360px;
-  height: 340px;
+  height: 360px;
   background-color: #50d074;
   display: flex;
   flex-direction: column;
@@ -202,7 +202,7 @@ article span {
 .preco-total h4,
 .preco-total span {
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .pop-up button {

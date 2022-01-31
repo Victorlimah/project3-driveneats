@@ -2,12 +2,9 @@ const comidas = ["miojo", "macarrao", "arroz", "feijoada"];
 const bebidas = ["coca", "pepsi", "fanta", "agua"];
 const sobremesas = ["pudim", "petit", "sorvete", "acai"];
 const popUp = document.querySelector(".finalizacao-pedido");
-let comidaSelecionada;
-let nomeComidaSelecionada;
-let bebidaSelecionada;
-let nomeBebidaSelecionada;
-let sobremesaSelecionada;
-let nomeSobremesaSelecionada;
+let comidaSelecionada, nomeComidaSelecionada, precoComidaSelecionada;
+let bebidaSelecionada, precoBebidaSelecionada, nomeBebidaSelecionada;
+let sobremesaSelecionada, nomeSobremesaSelecionada, precoSobremesaSelecionada;
 let nome = "";
 let endereco = "";
 
@@ -16,7 +13,11 @@ setTimeout(function () {
   paginaCarregando.classList.add("escondido");
 }, 1500);
 
-function marcarEscolha(itemSelecionado, nomeParaInserirCarrinho) {
+function marcarEscolha(
+  itemSelecionado,
+  nomeParaInserirCarrinho,
+  precoParaInserirCarrinho
+) {
   let nomeItem = document.getElementById(itemSelecionado);
   let string = "#" + itemSelecionado + " .check";
   let nomeCheck = document.querySelector(string);
@@ -25,14 +26,17 @@ function marcarEscolha(itemSelecionado, nomeParaInserirCarrinho) {
     if (itemSelecionado === comidas[i]) {
       comidaSelecionada = true;
       nomeComidaSelecionada = nomeParaInserirCarrinho;
+      precoComidaSelecionada = precoParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     } else if (itemSelecionado === bebidas[i]) {
       bebidaSelecionada = true;
       nomeBebidaSelecionada = nomeParaInserirCarrinho;
+      precoBebidaSelecionada = precoParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     } else if (itemSelecionado === sobremesas[i]) {
       sobremesaSelecionada = true;
       nomeSobremesaSelecionada = nomeParaInserirCarrinho;
+      precoSobremesaSelecionada = precoParaInserirCarrinho;
       colocarBackground(nomeItem, nomeCheck);
     }
   }
@@ -91,6 +95,17 @@ function zerarEscolhas(itemCardapio) {
 
 function cliqueFinalizarPedido() {
   if (verificaSeJaSelecionouTudo()) {
+    const checkComida = document.querySelector(".comida-escolhida h4");
+    const precoComida = document.querySelector(".comida-escolhida span");
+    const checkBebida = document.querySelector(".bebida-escolhida h4");
+    const precoBebida = document.querySelector(".bebida-escolhida span");
+    const checkSobremesa = document.querySelector(".sobremesa-escolhida h4");
+    const precoSobremesa = document.querySelector(".sobremesa-escolhida span");
+
+    checkComida.innerHTML = nomeComidaSelecionada;
+    checkBebida.innerHTML = nomeBebidaSelecionada;
+    checkSobremesa.innerHTML = nomeSobremesaSelecionada;
+
     popUp.classList.remove("escondido");
   }
 }
