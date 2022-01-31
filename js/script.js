@@ -5,6 +5,7 @@ const popUp = document.querySelector(".finalizacao-pedido");
 let comidaSelecionada, nomeComidaSelecionada, precoComidaSelecionada;
 let bebidaSelecionada, precoBebidaSelecionada, nomeBebidaSelecionada;
 let sobremesaSelecionada, nomeSobremesaSelecionada, precoSobremesaSelecionada;
+let valorTotal;
 let nome = "";
 let endereco = "";
 
@@ -111,7 +112,7 @@ function cliqueFinalizarPedido() {
     precoBebida.innerHTML = precoBebidaSelecionada.replace(".", ",");
     precoSobremesa.innerHTML = precoSobremesaSelecionada.replace(".", ",");
 
-    let valorTotal =
+    valorTotal =
       parseFloat(precoComidaSelecionada) +
       parseFloat(precoBebidaSelecionada) +
       parseFloat(precoSobremesaSelecionada);
@@ -123,8 +124,12 @@ function cliqueFinalizarPedido() {
 }
 
 function confirmarPedido() {
-  nome = prompt("Digite seu nome: ");
-  endereco = prompt("Digite seu endereço: ");
+  nome = prompt("Digite seu nome: ").replace(" ", "%20");
+  endereco = prompt("Digite seu endereço: ").replace(" ", "%20");
+
+  window.open(
+    `https://wa.me/5583986479932?text=Ol%C3%A1%2C+gostaria+de+fazer+o+pedido%3A%0A-+Prato%3A+${nomeComidaSelecionada}%0A-+Bebida%3A+${nomeBebidaSelecionada}%0A-+Sobremesa%3A+${nomeSobremesaSelecionada}%0ATotal%3A+R%24+${valorTotal}%0A%0ANome%3A+${nome}%0AEndere%C3%A7o%3A+${endereco}`
+  );
 }
 
 function cancelarPedido() {
