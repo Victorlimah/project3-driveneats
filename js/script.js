@@ -101,10 +101,22 @@ function cliqueFinalizarPedido() {
     const precoBebida = document.querySelector(".bebida-escolhida span");
     const checkSobremesa = document.querySelector(".sobremesa-escolhida h4");
     const precoSobremesa = document.querySelector(".sobremesa-escolhida span");
+    const precoTotal = document.querySelector(".preco-total span");
 
     checkComida.innerHTML = nomeComidaSelecionada;
     checkBebida.innerHTML = nomeBebidaSelecionada;
     checkSobremesa.innerHTML = nomeSobremesaSelecionada;
+
+    precoComida.innerHTML = precoComidaSelecionada.replace(".", ",");
+    precoBebida.innerHTML = precoBebidaSelecionada.replace(".", ",");
+    precoSobremesa.innerHTML = precoSobremesaSelecionada.replace(".", ",");
+
+    let valorTotal =
+      parseFloat(precoComidaSelecionada) +
+      parseFloat(precoBebidaSelecionada) +
+      parseFloat(precoSobremesaSelecionada);
+    valorTotal = valorTotal.toFixed(2);
+    precoTotal.innerHTML += valorTotal.replace(".", ",");
 
     popUp.classList.remove("escondido");
   }
